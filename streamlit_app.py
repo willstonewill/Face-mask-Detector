@@ -34,8 +34,7 @@ def mask_detect(img, model, detector):
             txt = 'Masked'
             color = 'lime'
 
-        # font = ImageFont.truetype("arial.ttf", round(width/4))
-        font = ImageFont.truetype(size=round(width/4))
+        font = ImageFont.truetype("Fonts/arial.ttf", round(width/4))
         draw.rectangle([(x1,y1),(x2,y2)], outline=color, width=2)
  
         if y1-height/5-2 <= 0:
