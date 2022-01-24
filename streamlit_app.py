@@ -46,7 +46,7 @@ def mask_detect(img, model, detector):
 
 if __name__ == '__main__':
     st.title('Welcome to Face-Mask Detector!')
-    img = st.file_uploader('Please Upload an Image', type=['png', 'jpg', 'jpeg'])
+    img = st.file_uploader('Please Upload an Image', type=['jpg', 'jpeg'])
     model = load_model()
     detector = load_face_detector()
 
