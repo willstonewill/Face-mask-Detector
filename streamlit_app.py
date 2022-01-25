@@ -60,7 +60,8 @@ if __name__ == '__main__':
 
     st.title('Original image uploaded:')
     img = Image.open(img)
-    st.image(ImageOps.contain(img, (666, 666)))   
+    img = ImageOps.contain(img, (666, 666))
+    st.image(img)   
     st.title('Result:')
     labelled_img = mask_detect(img, model, detector)
     st.image(labelled_img)
