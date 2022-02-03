@@ -18,9 +18,9 @@ This dataset was used for the second step of the whole model: mask classificatio
 
 ## How it works
 
-1. Original image as an input
-
-2. Capture faces
+1. Original image as an input\
+![s](/readme img/step1.png)
+3. Capture faces
 
 3. Mask classification
 
