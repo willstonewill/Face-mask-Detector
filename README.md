@@ -1,4 +1,5 @@
 # Face-mask detector
+Version: 1.0\
 App_link: https://share.streamlit.io/willstonewill/face-mask-detector/main
 
 # Introduction
