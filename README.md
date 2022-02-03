@@ -18,14 +18,14 @@ This dataset was used for the second step of the whole model: mask classificatio
 
 ## How it works
 
-1. Original image as an input\
-![s](/readme img/step1.png)
-3. Capture faces
-
+1. Original image as an input
+<img src="/readme_img/step1.png" width="200"/>
+2. Capture faces
+<img src="/readme_img/step2.png" width="200"/>
 3. Mask classification
-
+<img src="/readme_img/step3.png" width="200"/>
 4. Labelling and output
-
+<img src="/readme_img/step4.png" width="200"/>
 
 ## Model - Face detection
 
@@ -48,13 +48,14 @@ This is the second step of the model. The input of this step are the cropped and
 - Baseline model: \
 \
 This model is created as a benchmark and baseline. It is combined purely by dense layers. The testing accuracy is *51.3%* which is slightly or no better than random guess. Confusion matrix below:
-
+<img src="/readme_img/cm_baseline.png" width="300"/>
 
 - CNN model: \
 \
 Consists of several convolutional layers and dense layers. It provides a huge increase of accuracy upto *96.5%*. But it has a false positive issue which is especially severe under the scope of this project. Confusion matrix blow:
+<img src="/readme_img/cm_cnn.png" width="300"/>
 
-- Transfer learning model with VGG19(best performed model): \
+- Transfer learning model with VGG19(final model): \
 \
 A methodology of transfer learning is applied in this model on the VGG19 architecture. Typical transfer learning process is introduced and followed here. 
 1. First, freeze all weights of the pre-trained VGG19 architecture and create a deep neural network structure containing the VGG19 as an instance and some dense layers on top of it. 
@@ -62,16 +63,23 @@ A methodology of transfer learning is applied in this model on the VGG19 archite
 3. Third, unfreeze some layers of the VGG19(in my case the last 3 dense layers) and then retrain the whole model with the same training data(fine-tuning). \
 \
 This transfer learning technique can be helpful to keep VGG19 which was trained on a huge dataset of images(ImageNet) as a generic model, at the same time, make it specific to our topic/data.\
-As a result, this method offers an accuracy of **99.0%** before fine-tune and **99.8%** after fine tuning.
+As a result, this method offers an accuracy of **99.0%** before fine-tune and **99.8%** after fine tuning.\
 
 The confusion matrix:
 
+<img src="/readme_img/cm_vgg.png" width="300"/> 
+
 Accuracy and loss plots:
 
+<img src="/readme_img/acc.png" width="300"/>
+
+<img src="/readme_img/loss.png" width="300"/>
 
 Classification report and roc/auc plot:
 
+<img src="/readme_img/clf_report.png" width="300"/>
 
+<img src="/readme_img/roc_auc.png" width="300"/>
 
 ## Next steps:
 
