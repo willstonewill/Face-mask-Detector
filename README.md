@@ -64,7 +64,7 @@ A methodology of transfer learning is applied in this model on the VGG19 archite
 3. Third, unfreeze some layers of the VGG19(in my case the last 3 dense layers) and then retrain the whole model with the same training data(fine-tuning). \
 \
 This transfer learning technique can be helpful to keep VGG19 which was trained on a huge dataset of images(ImageNet) as a generic model, at the same time, make it specific to our topic/data.\
-As a result, this method offers an accuracy of **99.0%** before fine-tune and **99.8%** after fine tuning.\
+As a result, this method offers an accuracy of **99.0%** before fine-tune and **99.8%** after fine tuning.
 
 The confusion matrix:
 
